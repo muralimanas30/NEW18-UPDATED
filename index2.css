@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+}
+
+.navdiv2{
+    display: none;
+    gap: 1rem;
+    position: absolute;
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0rem 2rem;
+    width: calc(100% - 4rem);
+    top: 20%;
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 10px 0px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+}
+#b1233{
+    transform: scale(0.7);
+
+}
+#b1233:hover{
+    transform: scale(0.8);
+}
+.navdiv i{
+    transition: all 0.1s ease-in-out;
+}
+.navdiv i:hover{
+    box-shadow: 2px 2px 15px 1px #0f0f0f;
+    color: orange;
+}
+
+@keyframes entry{
+    from{
+        display: none;
+        
+        scale: 0.9;
+        opacity: 0.5;
+        transform:translate(25%,-50%)  skew(20deg) rotateY(90deg);
+    }
+    to{ display: flex;
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes exit{
+    to{ display: none;
+        scale: 0.5;
+        opacity: 0.5;
+        transform: translate(25%,-100%)  skew(20deg) rotateY(-90deg);
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:700px) {
+    .navdiv > *{
+        display: none;
+    }
+    .navdiv > i{
+        display: inline;
+        color: white;
+        filter: drop-shadow(0px 5px 12px whitesmoke);
+        scale: 1.145;
+
+    }
+    #mm{
+        opacity: 1;
+        animation-range-start:50%;
+        animation-range-end:95% ;
+        & h1{
+            opacity: 1;
+        }
+    }
+
+    @keyframes mmgrow {
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            transform:translateY(150%) scaleX(1.8) scaleY(1.6);
+            
+        }
+    }
+
+    @keyframes scrollingwin1 {
+        to{
+        transform: scale(1.9) skewY(30deg);
+        }
+        
+    }
+    
+    @keyframes scrollingwin2 {
+        0%{
+            transform: scale(1.0);
+        }
+        40%{
+            transform: scale(1.3);
+        }
+        60%{
+            transform: scale(1.0);
+        }
+        100%{
+            transform: scale(1.0);
+            
+        }
+        
+    }
+    
+}
+@media screen and (min-width:701px) {
+    .navdiv2{
+        display: none;
+    }
+
+    
+}
